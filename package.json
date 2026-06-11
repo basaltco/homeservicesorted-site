@@ -1,0 +1,13 @@
+{
+  "name": "homeservicesorted-site",
+  "version": "1.0.0",
+  "description": "HomeServiceSorted — Independent software reviews for US and Canadian home service businesses",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "watch": "eleventy --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
