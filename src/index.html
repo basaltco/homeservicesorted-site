@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HomeServiceSorted — Independent Software Reviews for Home Service Businesses</title>
-<meta name="description" content="Independent software reviews for US and Canadian home service businesses. Honest verdicts on scheduling, invoicing, and job management tools for cleaning, HVAC, plumbing, electrical, and more. Coming soon.">
-<meta name="robots" content="noindex">
+<meta name="description" content="Independent software reviews for US and Canadian cleaning, HVAC, plumbing, and home service businesses. Honest verdicts on Jobber, Housecall Pro, ZenMaid, and more. No sponsored content.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://homeservicesorted.com/">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -20,28 +20,43 @@
 body{font-family:var(--font-b);background:var(--white);color:var(--ink);line-height:1.7;font-size:16px;min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--accent);text-underline-offset:3px;font-weight:500}
 header{border-bottom:2px solid var(--black);background:var(--white)}
-.hdr{max-width:var(--max);margin:0 auto;display:flex;align-items:center;height:60px;padding:0 1.5rem}
+.hdr{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 1.5rem}
 .logo{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--black);text-decoration:none}
 .logo span{color:var(--accent)}
-main{flex:1;display:flex;align-items:center}
-.hero{max-width:var(--max);margin:0 auto;padding:5rem 1.5rem 6rem;width:100%}
+.hdr-nav{display:flex;gap:0;list-style:none}
+.hdr-nav a{font-size:0.8125rem;font-weight:500;color:var(--muted);text-decoration:none;padding:0.5rem 0.875rem;display:block;transition:color 0.15s}
+.hdr-nav a:hover,.hdr-nav a.active{color:var(--black)}
+main{flex:1}
+.hero{max-width:var(--max);margin:0 auto;padding:4rem 1.5rem 3rem}
 .hero-eyebrow{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:1rem}
-.hero h1{font-family:var(--font-d);font-size:clamp(2.25rem,5.5vw,3.5rem);font-weight:800;line-height:1.1;letter-spacing:-0.04em;color:var(--black);margin-bottom:1.25rem;max-width:700px}
+.hero h1{font-family:var(--font-d);font-size:clamp(2rem,5vw,3.25rem);font-weight:800;line-height:1.1;letter-spacing:-0.04em;color:var(--black);margin-bottom:1.25rem;max-width:680px}
 .hero h1 em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:1.0625rem;color:var(--muted);max-width:540px;margin-bottom:2.5rem;line-height:1.65}
-.badge-row{display:flex;flex-wrap:wrap;gap:0.625rem;margin-bottom:3rem}
+.hero-sub{font-size:1.0625rem;color:var(--muted);max-width:540px;margin-bottom:2rem;line-height:1.65}
+.badge-row{display:flex;flex-wrap:wrap;gap:0.625rem;margin-bottom:3.5rem}
 .badge{display:inline-flex;align-items:center;gap:0.35rem;background:#f7f6f2;border:1px solid var(--border);border-radius:100px;padding:0.35rem 0.875rem;font-size:0.8rem;color:var(--ink);font-weight:500}
 .badge::before{content:'✓';color:var(--accent);font-weight:700}
-.niches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem;max-width:600px;margin-bottom:3rem}
-.niche{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:1rem 1.25rem;font-size:0.875rem;font-weight:500;color:var(--ink)}
-.niche-icon{font-size:1.25rem;display:block;margin-bottom:0.35rem}
-.coming-soon-bar{background:var(--black);color:var(--white);border-radius:var(--r);padding:1.25rem 1.75rem;display:inline-flex;align-items:center;gap:1rem;font-size:0.9375rem}
-.coming-soon-bar strong{font-family:var(--font-d);font-size:1.0625rem;font-weight:700}
-.coming-soon-bar .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.cluster-section{max-width:var(--max);margin:0 auto;padding:0 1.5rem 4rem}
+.cluster-block{border-top:2px solid var(--black);padding-top:2rem;margin-bottom:3rem}
+.cluster-eyebrow{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
+.live-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;display:inline-block}
+.cluster-block h2{font-family:var(--font-d);font-size:1.625rem;font-weight:700;letter-spacing:-0.03em;color:var(--black);margin-bottom:0.375rem}
+.cluster-block a.cluster-hub{display:inline-block;font-family:var(--font-d);font-size:1.25rem;font-weight:600;color:var(--black);text-decoration:none;margin-bottom:1.25rem;border-bottom:2px solid var(--accent);padding-bottom:0.1rem}
+.cluster-block a.cluster-hub:hover{color:var(--accent)}
+.cluster-sub-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:1.25rem 0 0.5rem}
+.cluster-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0}
+.cluster-link{display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink);font-size:0.9375rem;font-weight:400;transition:color 0.15s}
+.cluster-link:last-child{border-bottom:none}
+.cluster-link::before{content:'→';color:var(--accent);font-weight:700;flex-shrink:0}
+.cluster-link:hover{color:var(--accent)}
+.coming-next{border-top:1px solid var(--border);padding-top:2rem;margin:0 auto;max-width:var(--max);padding-left:1.5rem;padding-right:1.5rem;padding-bottom:3rem}
+.coming-next-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:1rem}
+.niches{display:flex;flex-wrap:wrap;gap:0.625rem}
+.niche{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:0.625rem 1.25rem;font-size:0.875rem;font-weight:500;color:var(--muted);display:flex;align-items:center;gap:0.375rem}
 footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:0.8rem;color:var(--muted)}
 @media(max-width:680px){
-  .hero{padding:3.5rem 1.25rem 4rem}
-  .niches{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:3rem 1.25rem 2.5rem}
+  .cluster-links{grid-template-columns:1fr}
+  .hdr-nav{display:none}
 }
 </style>
 </head>
@@ -49,43 +64,69 @@ footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-
 
 <header>
   <div class="hdr">
-    <a class="logo" href="/">Home<span>Service</span>Sorted</a>
+    <a class="logo" href="/">HomeService<span>Sorted</span></a>
+    <ul class="hdr-nav">
+      <li><a href="/cleaning/best-cleaning-business-software" class="active">Cleaning</a></li>
+    </ul>
   </div>
 </header>
 
 <main>
   <div class="hero">
-    <p class="hero-eyebrow">Coming soon</p>
-    <h1>Independent software reviews for <em>home service businesses</em></h1>
-    <p class="hero-sub">Honest, research-backed reviews of scheduling, invoicing, and job management software for US and Canadian cleaning, HVAC, plumbing, electrical, landscaping, and handyman businesses. No sponsored content. No vendor influence.</p>
+    <p class="hero-eyebrow">Independent reviews — US &amp; Canada</p>
+    <h1>Software reviews for <em>home service businesses</em></h1>
+    <p class="hero-sub">Honest, research-backed reviews of scheduling, invoicing, and job management software. No sponsored content. No vendor influence. Cleaning reviews live now — HVAC, plumbing, and more coming soon.</p>
 
     <div class="badge-row">
       <span class="badge">Independent review — no sponsored content</span>
       <span class="badge">US &amp; Canada</span>
       <span class="badge">Real user complaints, real verdicts</span>
     </div>
+  </div>
 
-    <div class="niches">
-      <div class="niche"><span class="niche-icon">🧹</span>Cleaning</div>
-      <div class="niche"><span class="niche-icon">🔧</span>HVAC</div>
-      <div class="niche"><span class="niche-icon">🚿</span>Plumbing</div>
-      <div class="niche"><span class="niche-icon">⚡</span>Electrical</div>
-      <div class="niche"><span class="niche-icon">🌿</span>Landscaping</div>
-      <div class="niche"><span class="niche-icon">🔨</span>Handyman</div>
-    </div>
+  <div class="cluster-section">
+    <div class="cluster-block">
+      <p class="cluster-eyebrow"><span class="live-dot"></span> Live now</p>
+      <h2>Cleaning Business Software</h2>
+      <a href="/cleaning/best-cleaning-business-software" class="cluster-hub">Best Cleaning Business Software (2026) →</a>
 
-    <div class="coming-soon-bar">
-      <span class="dot"></span>
-      <div>
-        <strong>HomeServiceSorted is launching soon.</strong><br>
-        Cleaning software reviews first — Jobber, Housecall Pro, ZenMaid, and more.
+      <p class="cluster-sub-label">Reviews</p>
+      <div class="cluster-links">
+        <a href="/cleaning/housecall-pro-review" class="cluster-link">Housecall Pro Review — review automation, pricing, Android catch</a>
+        <a href="/cleaning/jobber-review" class="cluster-link">Jobber Review — scheduling, client portal, US and Canada</a>
+        <a href="/cleaning/zenmaid-review" class="cluster-link">ZenMaid Review — maid service features, pricing, payment catch</a>
+        <a href="/cleaning/swept-review" class="cluster-link">Swept Review — commercial janitorial, inspection logs, no free trial</a>
       </div>
+
+      <p class="cluster-sub-label">Comparisons</p>
+      <div class="cluster-links">
+        <a href="/cleaning/jobber-vs-housecall-pro" class="cluster-link">Jobber vs Housecall Pro — all-round platform vs review automation</a>
+        <a href="/cleaning/zenmaid-vs-jobber" class="cluster-link">ZenMaid vs Jobber — maid service specialist vs all-rounder</a>
+        <a href="/cleaning/zenmaid-vs-housecall-pro" class="cluster-link">ZenMaid vs Housecall Pro — specialist vs full-service platform</a>
+        <a href="/cleaning/swept-vs-jobber" class="cluster-link">Swept vs Jobber — commercial janitorial vs all-in-one</a>
+      </div>
+
+      <p class="cluster-sub-label">Guide</p>
+      <div class="cluster-links">
+        <a href="/cleaning/cleaning-software-osha-insurance-tracking" class="cluster-link">OSHA and Insurance Tracking — what cleaning software actually handles</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="coming-next">
+    <p class="coming-next-label">Coming next</p>
+    <div class="niches">
+      <span class="niche">🔧 HVAC</span>
+      <span class="niche">🚿 Plumbing</span>
+      <span class="niche">⚡ Electrical</span>
+      <span class="niche">🌿 Landscaping</span>
+      <span class="niche">🔨 Handyman</span>
     </div>
   </div>
 </main>
 
 <footer>
-  &copy; 2026 HomeServiceSorted &mdash; homeservicesorted.com
+  &copy; 2026 HomeServiceSorted &mdash; homeservicesorted.com &mdash; <a href="/cleaning/best-cleaning-business-software">Cleaning Software Reviews</a>
 </footer>
 
 </body>
