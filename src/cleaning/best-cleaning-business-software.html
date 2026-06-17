@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
@@ -84,9 +84,14 @@ tr:nth-child(even) td{background:#f7f6f2}
 .faq-item:last-child{border-bottom:none}
 .faq-q{font-weight:600;color:var(--black);margin-bottom:0.5rem;font-size:0.9375rem}
 .faq-a{color:var(--ink);font-size:0.9375rem;margin:0}
-.cta-box{background:var(--black);border-radius:var(--r);padding:1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.cta-box p{color:#d4d4d4;margin:0;font-size:0.9rem}
-.cta-btn{background:var(--accent);color:var(--white)!important;padding:0.625rem 1.25rem;border-radius:var(--r);text-decoration:none!important;font-weight:600;font-size:0.9rem;white-space:nowrap;display:inline-block}
+.cta-grid{border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin:2rem 0}
+.cta-grid h2{margin:0 0 0.5rem;padding:0;border:none;font-size:1.1rem}
+.cta-grid .sub{font-size:0.875rem;color:var(--muted);margin-bottom:1.25rem}
+.cta-tool{display:flex;flex-direction:column;gap:0.2rem}
+.cta-tool strong a{color:var(--black);text-decoration:none}
+.cta-tool strong a:hover{color:var(--accent)}
+.cta-tool .desc{font-size:0.8125rem;color:var(--muted);margin:0}
+.cta-tool .trial{font-size:0.8125rem}
 .related{border-top:1px solid var(--border);margin-top:3rem;padding-top:1.5rem}
 .related-label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:0.75rem}
 .related-links{display:flex;flex-direction:column;gap:0.5rem}
@@ -101,8 +106,8 @@ footer a{color:var(--muted)}
   h1{font-size:1.625rem;line-height:1.2}
   h2{font-size:1.125rem}
   .two-col{grid-template-columns:1fr}
-  .cta-box{flex-direction:column;align-items:flex-start}
-  .quick-facts{grid-template-columns:1fr 1fr}
+  .cta-grid .two-col{grid-template-columns:1fr 1fr}
+  .cta-grid{padding:1.25rem}
   table{font-size:0.8125rem}
   th,td{padding:0.5rem 0.625rem}
 }
@@ -113,7 +118,7 @@ footer a{color:var(--muted)}
   "@context": "https://schema.org",
   "@type": "Article",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-06-12",
+  "dateModified": "2026-06-17",
   "url": "https://homeservicesorted.com/cleaning/best-cleaning-business-software/",
   "headline": "Best Cleaning Business Software (2026)",
   "description": "Independent reviews of the best software for cleaning companies — Housecall Pro, Jobber, ZenMaid, and Swept. Real pricing, honest catches, no sponsored content.",
@@ -198,16 +203,38 @@ document.getElementById('hamburger').addEventListener('click',function(){
 
   <p>If you're scheduling cleaners by text message, tracking clients in a spreadsheet, and chasing payments manually — that's 5+ hours a week of admin that the right software eliminates. The hard part isn't finding software. It's knowing which tool actually fits a cleaning business, not just a generic field service company.</p>
   <p>Residential maid services and commercial janitorial operations have different needs. Tip tracking, recurring client preferences, and weekly-visit reminders are the whole product in ZenMaid — afterthoughts in software built for HVAC. Swept charges per location because commercial cleaning contracts work that way: one crew at one building is one contract, not fifteen users.</p>
-  <p>This guide covers the four tools US and Canadian cleaning companies rely on most — Housecall Pro, Jobber, ZenMaid, and Swept — based on verified Capterra and G2 reviews and confirmed pricing. No sponsored content. Where one tool fits a specific type of cleaning business better than another, we say so directly.</p>
+  <p>This guide covers the four tools US and Canadian cleaning companies rely on most — <a href="https://www.housecallpro.com">Housecall Pro</a>, <a href="https://www.getjobber.com">Jobber</a>, <a href="https://www.zenmaid.com">ZenMaid</a>, and <a href="https://www.getswept.com">Swept</a> — based on verified Capterra and G2 reviews and confirmed pricing. No sponsored content. Where one tool fits a specific type of cleaning business better than another, we say so directly.</p>
 
   <h2>Quick Verdict</h2>
   <div class="verdict">
     <p>Pick <strong>Jobber</strong> if you have 2+ employees and want one platform — scheduling, quoting, online booking, invoicing, payments — that you won't outgrow. It covers every cleaning niche and works identically in the US and Canada. Pick <strong>Housecall Pro</strong> if growing Google reviews is your main growth strategy — the automated review requests and follow-up text sequences are the best in this category. Pick <strong>ZenMaid</strong> if you run a residential maid service and want a tool built specifically for that workflow: tip tracking, recurring client preferences, and visit reminders are native features, not workarounds, at the lowest price here. Pick <strong>Swept</strong> if you manage commercial janitorial contracts at multiple locations — location-based pricing, inspection logs, and multilingual team messaging are built for that segment specifically. Nothing else in this guide replicates it.</p>
-    <p>All four offer 14-day free trials except Swept. Not sure where to start? Jobber's trial fits the widest range of cleaning businesses and requires no card.</p>
+    <p>Jobber is the clearest starting point if you're not sure — 14-day free trial, no card required.</p>
   </div>
 
+  <h2>Features at a Glance</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Feature</th><th>Jobber</th><th>Housecall Pro</th><th>ZenMaid</th><th>Swept</th></tr>
+      <tr><td>Starting price (monthly)</td><td>$49/mo (1 user)</td><td>$79/mo (1 user)</td><td>$19/mo + $4/cleaner</td><td>$30/mo (≤15 locations)</td></tr>
+      <tr><td>Free trial</td><td>✅ 14-day, no card</td><td>⚠️ Verify on site</td><td>⚠️ Verify on site</td><td>❌ Demo only</td></tr>
+      <tr><td>Recurring client management</td><td>✅</td><td>✅</td><td>✅ Native (preferences &amp; room notes)</td><td>⚠️ Commercial focus</td></tr>
+      <tr><td>Online booking</td><td>✅ Connect plan+</td><td>✅</td><td>✅ Booking form</td><td>❌</td></tr>
+      <tr><td>Auto reminders (SMS/email)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Tip tracking</td><td>⚠️ Workaround</td><td>⚠️ Workaround</td><td>✅ Native</td><td>❌</td></tr>
+      <tr><td>Invoicing</td><td>✅</td><td>✅</td><td>✅</td><td>⚠️ Basic</td></tr>
+      <tr><td>GPS tracking / shift check-in</td><td>✅</td><td>✅</td><td>⚠️ Limited</td><td>✅ Location check-in</td></tr>
+      <tr><td>iOS app rating</td><td>~4.7/5</td><td>~4.6/5</td><td>~4.7/5</td><td>~4.0/5</td></tr>
+      <tr><td>Android app rating</td><td>~4.6/5</td><td>~3.3/5 ⚠️</td><td>~4.5/5</td><td>~3.8/5</td></tr>
+      <tr><td>Review automation</td><td>✅ Available</td><td>✅ Best in class</td><td>❌</td><td>❌</td></tr>
+      <tr><td>Inspection logs</td><td>❌</td><td>❌</td><td>❌</td><td>✅ Native</td></tr>
+      <tr><td>Multi-location management</td><td>⚠️ User-based</td><td>⚠️ User-based</td><td>❌</td><td>✅ Location-priced</td></tr>
+      <tr><td>Support</td><td>✅ Chat + phone</td><td>⚠️ Phone on premium only</td><td>⚠️ Email only</td><td>⚠️ Verify on site</td></tr>
+    </table>
+  </div>
+  <p style="font-size:0.8125rem;color:var(--muted)">✅ = included &nbsp;·&nbsp; ⚠️ = partial or plan-restricted &nbsp;·&nbsp; ❌ = not available. App ratings approximate from Capterra and app stores at time of publication. Prices are approximate — verify current plans on each vendor's website.</p>
+
   <h2>Why This Decision Matters More Than the Monthly Cost</h2>
-  <p>At $49–$249 per month, the subscription is not the expensive part of choosing wrong. The expensive part is switching. Cleaning business owners consistently report that migrating from one platform to another takes one to three days of data export, re-entry, and staff retraining — usually during the weeks when business is already at its most demanding.</p>
+  <p>At $49–$329 per month, the subscription is not the expensive part of choosing wrong. The expensive part is switching. Cleaning business owners consistently report that migrating from one platform to another takes one to three days of data export, re-entry, and staff retraining — usually during the weeks when business is already at its most demanding.</p>
   <p>There's a second cost most guides miss: recurring client relationships are the economic engine of a cleaning business. A residential client who books bi-weekly for three years is worth $3,000–$5,000 in lifetime revenue. If your software loses their cleaning preferences, skips their scheduled reminder, or makes re-booking feel difficult — that's not a software problem, it's a revenue problem. The tools that handle recurring client management well earn back their cost many times over. The tools that handle it poorly lose clients invisibly, one friction point at a time.</p>
   <p>For Canadian cleaning businesses, the practical difference between tools is minimal — Jobber and Housecall Pro both serve US and Canadian customers equally, pricing is in USD, and the software features are identical across the border. The compliance notes in this guide reference US regulations primarily; Canadian equivalents are noted where material.</p>
 
@@ -215,25 +242,25 @@ document.getElementById('hamburger').addEventListener('click',function(){
 
   <div class="card" style="margin:1rem 0">
     <span class="tag tag-best">Best all-rounder</span>
-    <h3>Jobber — from $49/mo</h3>
+    <h3><a href="https://www.getjobber.com">Jobber</a> — from $49/mo</h3>
     <p>Jobber is the strongest all-rounder in this category and the clearest choice for any cleaning business that's growing. Set up a recurring weekly or bi-weekly schedule once — Jobber handles every future booking, reminder, and payment request automatically. The client self-service portal lets customers approve quotes, check upcoming appointments, and pay invoices without calling you. Quoting is fast: build and send from the app, convert to a job when the client approves. Online booking (Connect and Grow plans) lets customers book directly from your website without a phone call.</p>
     <p>Jobber isn't built specifically for cleaning — which is an advantage as much as a limitation. Add HVAC, landscaping, or any other service later and you don't need a second platform. The same account handles all of it. It also works identically in the US and Canada — Jobber is headquartered in Edmonton, Alberta, and has strong Canadian market penetration, so nothing changes whether your customers are in California or Ontario.</p>
-    <p><strong>Catch:</strong> Per-user pricing jumps sharply between plans — Core ($49/mo, 1 user) to Connect ($119/mo, up to 5 users) is a meaningful step up. Online booking requires Connect or above. Jobber is not built specifically for cleaning, so cleaning-specific features like tip tracking and recurring client notes require workarounds compared to ZenMaid. Some users on Capterra report the reporting module as less detailed than expected for the price.</p>
+    <p><strong>Catch:</strong> Per-user pricing jumps sharply between plans — Core ($49/mo, 1 user) to Connect ($139/mo, up to 5 users) is a meaningful step up. Online booking requires Connect or above. Jobber is not built specifically for cleaning, so cleaning-specific features like tip tracking and recurring client notes require workarounds compared to ZenMaid. Some users on Capterra report the reporting module as less detailed than expected for the price.</p>
     <a href="/cleaning/jobber-review">Full Jobber review →</a>
   </div>
 
   <div class="card" style="margin:1rem 0">
     <span class="tag tag-best">Best for customer communication</span>
-    <h3>Housecall Pro — from $49/mo</h3>
+    <h3><a href="https://www.housecallpro.com">Housecall Pro</a> — from $79/mo</h3>
     <p>Pick Housecall Pro when getting more Google reviews is a priority. The automated follow-up text sequences, review request automation, and postcard marketing — physical mail sent to your client list with a few clicks — are better than anything else in this category. For cleaning businesses that grow through referrals and five-star reviews, this automation has a direct line to revenue. It's also the most-reviewed tool here: 4.7/5 on Capterra from over 2,700 customers, the largest review base in the category.</p>
-    <p>Housecall Pro explicitly covers US and Canadian customers, which means it is a direct fit for Canadian cleaning businesses without any workarounds or geo-restrictions. The built-in payment processing, GPS-tracked dispatching, and in-app customer messaging cover the standard job management workflow cleanly. The Max plan at approximately $249/mo includes unlimited users, which makes it one of the most cost-effective options for larger cleaning teams.</p>
+    <p>Housecall Pro explicitly covers US and Canadian customers, which means it is a direct fit for Canadian cleaning businesses without any workarounds or geo-restrictions. The built-in payment processing, GPS-tracked dispatching, and in-app customer messaging cover the standard job management workflow cleanly. The Max plan at $329/mo (or $299/mo billed annually) includes unlimited users, which makes it one of the most cost-effective options for larger cleaning teams.</p>
     <p><strong>Catch:</strong> Cost creep from add-ons is the most consistent complaint from long-term users — features that seem included in the plan price sometimes require an additional monthly charge. The reporting module has been rated as weak (one independent review scored it 5.5 out of 10). The Android app has significantly lower ratings than the iOS version (approximately 3.3 out of 5 vs 4.6 out of 5 on iOS). Phone support is locked to premium plan tiers — the Basic plan is email and chat only. GPS tracking occasionally shows delays in real-time job status updates.</p>
     <a href="/cleaning/housecall-pro-review">Full Housecall Pro review →</a>
   </div>
 
   <div class="card" style="margin:1rem 0">
     <span class="tag tag-ok">Best for residential maid services</span>
-    <h3>ZenMaid — from $19/mo + $4 per cleaner</h3>
+    <h3><a href="https://www.zenmaid.com">ZenMaid</a> — from $19/mo + $4 per cleaner</h3>
     <p>ZenMaid is the only tool here built specifically for residential maid service businesses — and that specificity is the whole point. Recurring client profiles store cleaning preferences, entry instructions, and notes per room. Tip tracking is native. Automatic SMS and email reminders cut no-shows for weekly and bi-weekly visits. The cleaner-facing app keeps it simple: assignments, time tracking, completion photos — nothing overwhelming for cleaners who aren't tech-comfortable. At $19/mo plus $4 per active cleaner, it's the most affordable cleaning-specific option available.</p>
     <p>ZenMaid earns 4.7 out of 5 on Capterra from 192 verified reviews, with 79% of reviewers giving 5 stars. Users consistently praise the low learning curve and the quality of customer support (email only — no phone). The platform's focus on residential maid services means it handles the specific workflows cleaning companies need without the noise of a general-purpose tool adapted to the trade.</p>
     <p><strong>Catch:</strong> Payment processing is the most consistent complaint — multiple Capterra reviewers report failed transactions and payment delays when collecting through ZenMaid directly. System crashes during software updates have been flagged by multiple users. There's no phone support — email only, which is a real gap if you hit a payment issue mid-week. The per-seat pricing ($4/active cleaner) scales costs directly with team size — past 10 cleaners, Jobber's flat-rate Connect plan becomes more competitive.</p>
@@ -242,7 +269,7 @@ document.getElementById('hamburger').addEventListener('click',function(){
 
   <div class="card" style="margin:1rem 0">
     <span class="tag tag-ok">Best for commercial janitorial</span>
-    <h3>Swept — from ~$30/mo per location</h3>
+    <h3><a href="https://www.getswept.com">Swept</a> — from $30/mo per location tier</h3>
     <p>Choose Swept if you run commercial janitorial contracts — it's built for a fundamentally different operation than residential maid services. The pricing model reflects this: you pay per location (building or contract site), not per user. A crew of 15 cleaners across three buildings pays around $30/mo, not per head. The features match: inspection logs for quality-control walkthroughs, supervisor and cleaner role separation, multilingual team messaging for diverse crews, and GPS-verified shift check-ins at each location. None of the other tools here do this as well.</p>
     <p>For commercial cleaning operators managing five or more building contracts, Swept's model becomes financially compelling compared to Jobber's per-user structure. A team of 15 cleaners across three locations pays approximately $30/mo — versus Jobber's Grow plan at $199/mo. The tradeoff is feature breadth: Swept does not have Jobber's quoting, online booking, or client portal.</p>
     <p><strong>Catch:</strong> No free trial — the only tool in this group without one. Occasional app crashes have been reported by users on G2 and Capterra. Swept is not a fit for residential maid services — the pricing model and feature set are designed for commercial cleaning. Limited integrations compared to Jobber or Housecall Pro. If you need full job-to-cash workflow (quoting, invoicing, payment collection, client portal), Jobber is the stronger choice even for commercial cleaning operations.</p>
@@ -280,13 +307,13 @@ document.getElementById('hamburger').addEventListener('click',function(){
   <div class="table-wrap">
     <table>
       <tr><th>Tool</th><th>Starting price</th><th>Small team (3–5)</th><th>10-person team</th><th>Free trial</th></tr>
-      <tr><td>Jobber</td><td>$49/mo (1 user)</td><td>$119/mo (Connect)</td><td>$199/mo (Grow)</td><td>14 days</td></tr>
-      <tr><td>Housecall Pro</td><td>$49/mo (Basic)</td><td>$129/mo (Essentials)</td><td>$249/mo (Max, unlimited)</td><td>14 days</td></tr>
-      <tr><td>ZenMaid</td><td>$23/mo (1 cleaner)</td><td>$35–$39/mo*</td><td>$59/mo*</td><td>14 days</td></tr>
-      <tr><td>Swept</td><td>~$30/mo (1–15 locations)</td><td>~$30/mo*</td><td>Contact for pricing</td><td>No free trial</td></tr>
+      <tr><td>Jobber</td><td>$49/mo (1 user)</td><td>$139/mo (Connect)</td><td>$199/mo (Grow)</td><td>✅ 14 days, no card</td></tr>
+      <tr><td>Housecall Pro</td><td>$79/mo (Basic)</td><td>$189/mo (Essentials)</td><td>$329/mo (Max, unlimited)</td><td>⚠️ Verify on site</td></tr>
+      <tr><td>ZenMaid</td><td>$23/mo (1 cleaner)</td><td>$35–$39/mo*</td><td>$59/mo*</td><td>⚠️ Verify on site</td></tr>
+      <tr><td>Swept</td><td>$30/mo (1–15 locations)</td><td>$30/mo*</td><td>$150–$225/mo</td><td>❌ Demo only</td></tr>
     </table>
   </div>
-  <p style="font-size:0.8125rem;color:var(--muted)">*ZenMaid charges $19/mo base + $4 per active cleaner monthly. *Swept charges per location, not per user — a team of any size at one location pays ~$30/mo. Annual billing discounts available on Jobber and Housecall Pro. Prices are approximate — verify current plans on each vendor's website before making a decision.</p>
+  <p style="font-size:0.8125rem;color:var(--muted)">*ZenMaid charges $19/mo base + $4 per active cleaner monthly. *Swept charges per location, not per user — a team of any size at one location pays $30/mo. Annual billing available on Jobber (Core $29, Connect $99, Grow $149/mo) and Housecall Pro (Basic $59, Essentials $149, Max $299/mo). Prices are approximate — verify current plans on each vendor's website before making a decision.</p>
 
   <h2>What to Check Before You Commit</h2>
   <div class="table-wrap">
@@ -307,11 +334,12 @@ document.getElementById('hamburger').addEventListener('click',function(){
   <h2>The Decision Framework</h2>
   <div class="decision">Residential maid service, recurring weekly/bi-weekly clients
 → ZenMaid if you have fewer than 10 cleaners and want a
-  cleaning-specialist tool at the lowest price. 14-day free trial.
+  cleaning-specialist tool at the lowest price.
 
 Residential cleaning, 2+ employees, planning to grow
 → Jobber. Recurring jobs, online booking (Connect plan+),
   client portal, covers every home service niche if you expand.
+  14-day free trial, no card required.
 
 Customer reviews and referrals are your primary growth channel
 → Housecall Pro. The automated follow-up sequences and review
@@ -328,8 +356,9 @@ Small team, cost is the main constraint (US or Canada)
   option. Email support only — acceptable for most small teams.
 
 5+ employees on fixed salary, scaling quickly
-→ Housecall Pro Max (~$249/mo, unlimited users) or Jobber Grow
-  ($199/mo, up to 15 users). Both work out similarly at this scale.
+→ Housecall Pro Max ($329/mo monthly, $299/mo annual, unlimited
+  users) or Jobber Grow ($199/mo, up to 15 users). Both work
+  out similarly at this scale.
 
 Multi-service business (cleaning + HVAC, landscaping, etc.)
 → Jobber. Single account covers every home service trade.
@@ -347,37 +376,56 @@ Not sure
   <h2>Frequently Asked Questions</h2>
   <div class="faq">
     <div class="faq-item">
-      <p class="faq-q">What is the best software for a small cleaning company?</p>
-      <p class="faq-a">For a small residential maid service with 1–8 cleaners, ZenMaid at $19/mo + $4 per cleaner is the most cost-effective cleaning-specific option. It handles recurring client management, tip tracking, and automatic reminders as native features. For any cleaning business planning to grow or add online booking, Jobber's Core plan at $49/mo is the stronger long-term foundation — it covers everything ZenMaid does plus quoting, client portal, and room to scale without switching platforms. Both offer 14-day free trials.</p>
+      <p class="faq-q">What's the best software for a solo cleaner just starting out?</p>
+      <p class="faq-a">ZenMaid at $19/mo base plus $4 for yourself as an active cleaner is the most affordable way to manage bookings, send client reminders, and track tips without paying for features you won't need for months. If you plan to hire even one additional cleaner within the year — or want online booking from day one — start with Jobber's Core plan at $49/mo instead. The 14-day free trial lets you test scheduling, invoicing, and the client portal before committing. Starting on the right platform is cheaper than migrating later when you're busier.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Does cleaning business software work in Canada?</p>
-      <p class="faq-a">Yes. Jobber and Housecall Pro both serve US and Canadian customers without restriction — Jobber is headquartered in Edmonton, Alberta, and has strong Canadian market penetration. ZenMaid also works in Canada. Pricing is in USD across all platforms; Canadian users pay in CAD at the prevailing exchange rate. The software features are identical across the border. This guide's compliance notes reference US federal and state regulations — Canadian cleaning businesses should verify provincial requirements (WorkSafeBC, WSIB Ontario, etc.) separately, as the software does not enforce jurisdiction-specific compliance.</p>
+      <p class="faq-q">Can I run payroll through cleaning business software?</p>
+      <p class="faq-a">No. None of the tools reviewed here — Jobber, Housecall Pro, ZenMaid, or Swept — include payroll processing. They handle the job management layer: scheduling, invoicing, client communication, and collecting payments from customers. For paying W-2 employees or issuing 1099s to independent contractors, you need a separate payroll platform. Gusto, QuickBooks Payroll, and ADP are the most common choices for small cleaning businesses. Jobber and Housecall Pro both integrate directly with QuickBooks, which reduces double-entry on the accounting side — worth testing during your trial.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Is Housecall Pro good for cleaning companies?</p>
-      <p class="faq-a">Yes, particularly for residential cleaning businesses where growing Google reviews and retaining customers through automated follow-ups is a priority. Housecall Pro's review request automation, follow-up text sequences, and postcard marketing tools are the best in this category. The platform rates 4.7 out of 5 on Capterra from over 2,700 reviews. The main catches to know: the Android app rates significantly lower than iOS (~3.3 vs 4.6), phone support requires a premium plan, and some users report cost creep from add-ons as they scale. If your team is primarily on Android, trial carefully before committing.</p>
+      <p class="faq-q">ZenMaid vs Jobber: which is better for a maid service?</p>
+      <p class="faq-a">For a residential maid service with fewer than 10 cleaners, ZenMaid wins on the features that matter daily: tip tracking is native, recurring client preferences and room-by-room notes are built in, and the cleaner-facing app is designed for non-technical users. Jobber does not have native tip tracking — it requires a workaround. The gap where Jobber wins: online booking (requires the Connect plan at $139/mo), client self-service portal, and quoting. ZenMaid's payment processing has had documented issues (multiple Capterra complaints) — if you collect payments online, test that specifically during your trial. Past 10 cleaners, Jobber's flat-rate Connect plan ($139/mo) becomes more cost-effective than ZenMaid's per-seat model.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">What is ZenMaid and is it worth it?</p>
-      <p class="faq-a">ZenMaid is a job management platform built specifically for residential maid service businesses. Unlike Jobber or Housecall Pro — which are general-purpose field service tools adapted to cleaning — ZenMaid is designed from the ground up for the residential maid service workflow: recurring client profiles with cleaning preferences, tip tracking, automatic visit reminders, and a cleaner-facing mobile app built for non-technical users. At $19/mo base plus $4 per active cleaner, it is the most affordable cleaning-specific option available. It is worth it for owner-operators and small teams who want cleaning-native features without paying for a broader platform. The main caution is payment processing — multiple users report issues collecting payments through ZenMaid directly.</p>
+      <p class="faq-q">Does Housecall Pro work for commercial cleaning?</p>
+      <p class="faq-a">It can handle commercial cleaning, but it's primarily designed for residential service businesses with repeat individual clients. The features most useful to commercial janitorial — location-based scheduling across multiple contract sites, inspection checklists, quality-control walkthroughs, multilingual crew messaging — are not native to Housecall Pro. For commercial cleaning contracts with multiple locations and a supervisory layer, Swept is the purpose-built option. If you do commercial cleaning but also need strong invoicing, client communication, and a customer portal, Jobber covers both segments better than Housecall Pro does.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Is there free cleaning business software?</p>
-      <p class="faq-a">No fully-featured free plan exists in this category. ZenMaid, Jobber, and Housecall Pro all offer 14-day free trials without requiring a credit card — enough time to run through the core workflow and test scheduling, invoicing, and client communication. Swept has no free trial but offers a demo call. Connecteam has a free plan for up to 10 users that covers scheduling and team communication but is not purpose-built for cleaning — it does not handle quoting, invoicing, or client portals. If cost is the primary constraint, ZenMaid's $23/mo for a single-cleaner operation is the lowest entry point among the cleaning-focused tools.</p>
+      <p class="faq-q">Is there cleaning software that tracks certificates of insurance?</p>
+      <p class="faq-a">None of the four tools here have dedicated COI (certificate of insurance) tracking built in. Jobber and Housecall Pro allow you to store custom fields and attachments on client records, which cleaning business owners use as a workaround — upload the COI document to the client file, set a reminder for the expiry date. For formal COI management at scale (tracking your own coverage, managing COIs from subcontractors, automated expiry alerts), a dedicated compliance platform handles it better. The compliance guide on this site covers what your cleaning software should and shouldn't be expected to handle.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">What is the difference between Swept and Jobber for cleaning businesses?</p>
-      <p class="faq-a">Swept and Jobber serve different segments within cleaning. Swept is built for commercial janitorial operations — it charges per location rather than per user, which suits businesses with large crews at multiple contract sites. Its inspection logs, supervisor/cleaner role separation, and multilingual team messaging are features Jobber does not replicate. Jobber is the stronger all-round platform for quoting, invoicing, client portal, and online booking — it serves both residential and commercial cleaning, and handles other home service trades if you expand. If you run commercial janitorial contracts with multi-location inspection requirements, Swept is purpose-built. If you need a full job-to-cash workflow with a client-facing portal, Jobber wins on feature breadth.</p>
+      <p class="faq-q">Which cleaning software works in both the US and Canada?</p>
+      <p class="faq-a">Jobber and Housecall Pro both work identically in the US and Canada — no geo-restrictions, no feature differences across the border. Jobber is headquartered in Edmonton, Alberta, which gives it strong Canadian market penetration; many Canadian cleaning businesses use it as their primary platform. ZenMaid also works in Canada. Swept is available in Canada but is US-focused in its marketing. Pricing is in USD across all platforms; Canadian users pay in CAD at the prevailing exchange rate. For compliance: this guide references US federal and state regulations as primary. Canadian cleaning businesses should check provincial equivalents separately — WorkSafeBC, WSIB Ontario, and similar bodies have different requirements that software does not enforce.</p>
     </div>
   </div>
 
-  <div class="cta-box">
-    <div>
-      <strong style="color:var(--white);display:block;margin-bottom:0.3rem">Ready to try Jobber?</strong>
-      <p>14-day free trial — no card required. Works for every cleaning niche, US and Canada.</p>
+  <div class="cta-grid">
+    <h2>Compare your options</h2>
+    <p class="sub">Start with the tool that fits your business type. Jobber is the only one with a confirmed 14-day free trial — no card required.</p>
+    <div class="two-col">
+      <div class="cta-tool">
+        <strong><a href="https://www.getjobber.com">Jobber →</a></strong>
+        <p class="desc">Best all-rounder. US and Canada.</p>
+        <a href="https://www.getjobber.com" class="trial">Start 14-day free trial</a>
+      </div>
+      <div class="cta-tool">
+        <strong><a href="https://www.housecallpro.com">Housecall Pro →</a></strong>
+        <p class="desc">Best for Google review growth.</p>
+        <a href="https://www.housecallpro.com" class="trial">View plans and pricing</a>
+      </div>
+      <div class="cta-tool">
+        <strong><a href="https://www.zenmaid.com">ZenMaid →</a></strong>
+        <p class="desc">Best for residential maid services.</p>
+        <a href="https://www.zenmaid.com" class="trial">View plans and pricing</a>
+      </div>
+      <div class="cta-tool">
+        <strong><a href="https://www.getswept.com">Swept →</a></strong>
+        <p class="desc">Best for commercial janitorial.</p>
+        <a href="https://www.getswept.com" class="trial">Request a demo</a>
+      </div>
     </div>
-    <a href="https://www.getjobber.com" class="cta-btn">Start free trial →</a>
   </div>
 
   <div class="related">
