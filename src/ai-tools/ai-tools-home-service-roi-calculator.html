@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tools ROI Calculator for Home Service Businesses (2026) — HomeServiceSorted</title>
+<meta name="description" content="Calculate whether an AI receptionist pays for itself in your home service business. Enter your missed calls, average job value, and tool cost — see your estimated ROI.">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0f0f0f;--white:#fafaf8;--ink:#1c1c1c;--muted:#6b6b6b;
+  --border:#e2e0d8;--accent:#0369a1;--accent-soft:#e0f2fe;
+  --orange-soft:#fff8f0;--red-soft:#fef2f2;--green-soft:#f0fdf4;
+  --font-d:'Fraunces',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;
+  --r:6px;--max:760px;
+}
+body{font-family:var(--font-b);background:var(--white);color:var(--ink);line-height:1.7;font-size:16px}
+a{color:var(--accent);text-underline-offset:3px;font-weight:500}
+header{border-bottom:2px solid var(--black);background:var(--white);position:sticky;top:0;z-index:200}
+.hdr{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:58px;padding:0 1.5rem}
+.logo{font-family:var(--font-d);font-size:1.2rem;font-weight:700;color:var(--black);text-decoration:none;flex-shrink:0}
+.logo span{color:var(--accent)}
+.nav{display:flex;gap:0;list-style:none;margin:0}
+.nav>li{position:relative}
+.nav>li>a{display:block;font-size:0.8125rem;font-weight:500;color:var(--muted);text-decoration:none;padding:0.5rem 0.875rem;transition:color 0.15s}
+.nav>li>a:hover{color:var(--black)}
+.nav>li>a.has-dropdown::after{content:'▾';font-size:0.6rem;margin-left:0.3rem;vertical-align:middle}
+.dropdown{display:none;position:absolute;top:100%;left:0;background:var(--white);border:1px solid var(--border);border-top:2px solid var(--accent);border-radius:0 0 var(--r) var(--r);min-width:240px;z-index:300;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.nav>li:hover .dropdown{display:block}
+.dropdown a{display:block;padding:0.625rem 1rem;font-size:0.8125rem;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--border);font-weight:400;transition:background 0.1s}
+.dropdown a:last-child{border-bottom:none}
+.dropdown a:hover{background:var(--accent-soft);color:var(--black)}
+.dropdown-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);padding:0.5rem 1rem 0.25rem;display:block}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:0.5rem;background:none;border:none;margin-left:auto}
+.hamburger span{display:block;width:22px;height:2px;background:var(--black);transition:all 0.25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;background:var(--white);border-top:1px solid var(--border);padding:1rem 1.5rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-section{margin-bottom:1.25rem}
+.mobile-section-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:0.5rem;display:block}
+.mobile-menu a{display:block;font-size:0.9375rem;color:var(--ink);text-decoration:none;padding:0.5rem 0;border-bottom:1px solid var(--border);font-weight:400}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--accent)}
+main{max-width:var(--max);margin:0 auto;padding:2.5rem 1.5rem 5rem}
+.badge{background:var(--accent-soft);border:1px solid #7dd3fc;border-radius:var(--r);padding:0.375rem 0.875rem;font-size:0.8rem;color:#0c4a6e;font-weight:500;display:inline-flex;align-items:center;gap:0.4rem;margin-bottom:1.75rem}
+h1{font-family:var(--font-d);font-size:clamp(1.75rem,4vw,2.25rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;color:var(--black);margin-bottom:1rem}
+h2{font-family:var(--font-d);font-size:1.25rem;font-weight:600;letter-spacing:-0.02em;color:var(--black);margin:2.25rem 0 0.625rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1rem;font-weight:600;color:var(--black);margin:1.5rem 0 0.4rem}
+p{margin-bottom:1rem}
+strong{font-weight:600;color:var(--black)}
+ul,ol{margin:0 0 1rem 1.25rem}
+li{margin-bottom:0.4rem}
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.25rem 0;border-radius:var(--r);border:1px solid var(--border)}
+.table-wrap table{margin:0;border:none;border-radius:0;min-width:520px}
+table{width:100%;border-collapse:collapse;font-size:0.875rem;margin:1.25rem 0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+th{background:var(--black);color:var(--white);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;padding:0.6rem 0.875rem;text-align:left;font-weight:600}
+td{padding:0.6rem 0.875rem;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#f7f6f2}
+.verdict{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:1rem 1.25rem;margin:1.25rem 0}
+.catch{background:var(--orange-soft);border-left:3px solid #f97316;border-radius:0 var(--r) var(--r) 0;padding:1rem 1.25rem;margin:1.25rem 0}
+.not-for{background:var(--red-soft);border-left:3px solid #ef4444;border-radius:0 var(--r) var(--r) 0;padding:1rem 1.25rem;margin:1.25rem 0}
+.highlight{background:var(--green-soft);border-left:3px solid #16a34a;border-radius:0 var(--r) var(--r) 0;padding:1rem 1.25rem;margin:1.25rem 0}
+.catch p:last-child,.verdict p:last-child,.not-for p:last-child,.highlight p:last-child{margin-bottom:0}
+.calc-box{background:#f7f6f2;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin:1.25rem 0}
+.calc-box h3{margin-top:0;font-family:var(--font-d);font-size:1.1rem;color:var(--black)}
+.field-group{margin-bottom:1rem}
+.field-group label{display:block;font-size:0.875rem;font-weight:600;color:var(--black);margin-bottom:0.35rem}
+.field-group .hint{font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem}
+.field-group input[type=number],.field-group select{width:100%;padding:0.6rem 0.75rem;border:1px solid var(--border);border-radius:var(--r);font-family:var(--font-b);font-size:0.9375rem;background:var(--white);color:var(--ink);-webkit-appearance:none;appearance:none}
+.field-group input[type=number]:focus,.field-group select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.calc-btn{background:var(--accent);color:var(--white);border:none;border-radius:var(--r);padding:0.75rem 1.5rem;font-family:var(--font-b);font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:0.5rem}
+.calc-btn:hover{background:#025f8a}
+.result-box{background:var(--white);border:2px solid var(--accent);border-radius:var(--r);padding:1.25rem;margin-top:1.25rem;display:none}
+.result-box.show{display:block}
+.result-row{display:flex;justify-content:space-between;align-items:baseline;padding:0.5rem 0;border-bottom:1px solid var(--border)}
+.result-row:last-of-type{border-bottom:none}
+.result-label{font-size:0.875rem;color:var(--ink)}
+.result-val{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--black)}
+.result-val.positive{color:#166534}
+.result-val.negative{color:#991b1b}
+.result-val.neutral{color:var(--accent)}
+.result-recommendation{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:1rem 1.25rem;margin-top:1rem;font-size:0.9375rem}
+.disclaimer{font-size:0.8rem;color:var(--muted);margin-top:0.75rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}
+.card{border:1px solid var(--border);border-radius:var(--r);padding:1.25rem}
+.card h3{margin-top:0}
+.decision{background:#f7f6f2;border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;font-family:'Courier New',monospace;font-size:0.8125rem;line-height:1.9;margin:1.25rem 0;white-space:pre-wrap}
+.faq{margin:1.25rem 0}
+.faq-item{border-bottom:1px solid var(--border);padding:1rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;color:var(--black);margin-bottom:0.5rem;font-size:0.9375rem}
+.faq-a{color:var(--ink);font-size:0.9375rem;margin:0}
+.cta-grid{border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;margin:2rem 0}
+.cta-grid h2{margin:0 0 0.5rem;padding:0;border:none;font-size:1.1rem}
+.cta-grid .sub{font-size:0.875rem;color:var(--muted);margin-bottom:1.25rem}
+.cta-tool{display:flex;flex-direction:column;gap:0.2rem}
+.cta-tool strong a{color:var(--black);text-decoration:none}
+.cta-tool strong a:hover{color:var(--accent)}
+.cta-tool .desc{font-size:0.8125rem;color:var(--muted);margin:0}
+.cta-tool .trial{font-size:0.8125rem}
+.related{border-top:1px solid var(--border);margin-top:3rem;padding-top:1.5rem}
+.related-label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:0.75rem}
+.related-links{display:flex;flex-direction:column;gap:0.5rem}
+.related-links a{font-size:0.9375rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+.related-links a::before{content:'→';color:var(--accent);font-weight:700}
+footer{border-top:1px solid var(--border);padding:1.75rem 1.5rem;text-align:center;font-size:0.8rem;color:var(--muted)}
+footer a{color:var(--muted)}
+@media(max-width:680px){
+  .nav{display:none}
+  .hamburger{display:flex}
+  main{padding:2rem 1rem 4rem}
+  h1{font-size:1.625rem;line-height:1.2}
+  h2{font-size:1.125rem}
+  .two-col{grid-template-columns:1fr}
+  table{font-size:0.8125rem}
+  th,td{padding:0.5rem 0.625rem}
+}
+</style>
+<link rel="canonical" href="https://homeservicesorted.com/ai-tools/ai-tools-home-service-roi-calculator/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "url": "https://homeservicesorted.com/ai-tools/ai-tools-home-service-roi-calculator/",
+  "headline": "AI Tools ROI Calculator for Home Service Businesses (2026)",
+  "description": "Calculate whether an AI receptionist pays for itself in your home service business. Enter your missed calls, average job value, and tool cost — see your estimated ROI.",
+  "author": {"@type":"Organization","name":"HomeServiceSorted"},
+  "publisher": {"@type":"Organization","name":"HomeServiceSorted","url":"https://homeservicesorted.com"},
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://homeservicesorted.com/ai-tools/ai-tools-home-service-roi-calculator/"}
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <a href="/" class="logo">HomeService<span>Sorted</span></a>
+    <ul class="nav">
+      <li><a href="/ai-tools/best-ai-tools-home-service-business/">AI Tools</a></li>
+      <li>
+        <a href="#" class="has-dropdown">Reviews</a>
+        <div class="dropdown">
+          <span class="dropdown-label">AI Receptionists</span>
+          <a href="/ai-tools/smith-ai-review/">Smith.ai Review</a>
+          <a href="/ai-tools/jobber-ai-receptionist-review/">Jobber AI Receptionist Review</a>
+          <a href="/ai-tools/ruby-receptionist-review/">Ruby Review</a>
+          <span class="dropdown-label">AI Marketing</span>
+          <a href="/ai-tools/podium-review/">Podium Review</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="has-dropdown">Compare</a>
+        <div class="dropdown">
+          <span class="dropdown-label">Head-to-Head</span>
+          <a href="/ai-tools/smith-ai-vs-ruby/">Smith.ai vs Ruby</a>
+          <a href="/ai-tools/smith-ai-vs-jobber-receptionist/">Smith.ai vs Jobber AI</a>
+          <a href="/ai-tools/ai-receptionist-vs-answering-service/">AI Receptionist vs Answering Service</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="has-dropdown">Guides</a>
+        <div class="dropdown">
+          <span class="dropdown-label">Practical Guides</span>
+          <a href="/ai-tools/chatgpt-for-home-service-business/">ChatGPT for Contractors</a>
+          <a href="/ai-tools/ai-tools-home-service-roi-calculator/">AI ROI Calculator</a>
+        </div>
+      </li>
+      <li><a href="/cleaning/best-cleaning-business-software/">Cleaning Software</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <div class="mobile-section">
+      <span class="mobile-section-label">AI Tools</span>
+      <a href="/ai-tools/best-ai-tools-home-service-business/">Best AI Tools for Home Services</a>
+      <a href="/ai-tools/chatgpt-for-home-service-business/">ChatGPT for Contractors</a>
+      <a href="/ai-tools/ai-tools-home-service-roi-calculator/">AI ROI Calculator</a>
+    </div>
+    <div class="mobile-section">
+      <span class="mobile-section-label">AI Receptionist Reviews</span>
+      <a href="/ai-tools/smith-ai-review/">Smith.ai Review</a>
+      <a href="/ai-tools/jobber-ai-receptionist-review/">Jobber AI Receptionist Review</a>
+      <a href="/ai-tools/ruby-receptionist-review/">Ruby Review</a>
+      <a href="/ai-tools/podium-review/">Podium Review</a>
+    </div>
+    <div class="mobile-section">
+      <span class="mobile-section-label">Compare</span>
+      <a href="/ai-tools/smith-ai-vs-ruby/">Smith.ai vs Ruby</a>
+      <a href="/ai-tools/smith-ai-vs-jobber-receptionist/">Smith.ai vs Jobber AI Receptionist</a>
+      <a href="/ai-tools/ai-receptionist-vs-answering-service/">AI Receptionist vs Answering Service</a>
+    </div>
+    <div class="mobile-section">
+      <span class="mobile-section-label">Also on HomeServiceSorted</span>
+      <a href="/cleaning/best-cleaning-business-software/">Best Cleaning Business Software</a>
+    </div>
+  </nav>
+</header>
+<script>
+document.getElementById('hamburger').addEventListener('click',function(){
+  this.classList.toggle('open');
+  document.getElementById('mobile-menu').classList.toggle('open');
+});
+</script>
+
+<main>
+  <div class="badge">✓ Independent tool — no sponsored content</div>
+  <h1>AI Receptionist ROI Calculator for Home Service Businesses</h1>
+
+  <p>An AI receptionist costs $97–$99/mo. Whether it pays for itself depends on how many inbound calls you miss each month and what each recovered job is worth. Enter your numbers below to see a straightforward estimate.</p>
+
+  <div class="catch">
+    <p><strong>This is an estimate, not a guarantee.</strong> Real ROI depends on actual call quality, how well the AI handles your specific call type, and whether callers who reach the AI actually book. Use this as a starting point — the best test is a real trial with your own call volume. Verify current pricing directly with each tool before committing.</p>
+  </div>
+
+  <h2>Calculate Your Estimated ROI</h2>
+
+  <div class="calc-box">
+    <h3>Your Business Numbers</h3>
+
+    <div class="field-group">
+      <label for="missed-calls">Missed inbound calls per month</label>
+      <div class="hint">Check your phone's missed call log over the last 30 days. Include calls during jobs, after hours, and weekends.</div>
+      <input type="number" id="missed-calls" min="0" max="500" placeholder="e.g. 20" value="">
+    </div>
+
+    <div class="field-group">
+      <label for="job-value">Average job value ($)</label>
+      <div class="hint">Your typical single-job revenue. For recurring clients, use the value of one visit, not the lifetime value.</div>
+      <input type="number" id="job-value" min="0" max="10000" placeholder="e.g. 250" value="">
+    </div>
+
+    <div class="field-group">
+      <label for="recovery-rate">Estimated recovery rate (%)</label>
+      <div class="hint">What percentage of missed callers would book if an AI answered? Industry estimates suggest 25–40% for routine service calls. Use 20% if conservative, 35% if your callers are motivated buyers.</div>
+      <input type="number" id="recovery-rate" min="0" max="100" placeholder="e.g. 30" value="">
+    </div>
+
+    <div class="field-group">
+      <label for="tool-cost">Monthly AI tool cost ($)</label>
+      <div class="hint">Smith.ai AI-only: $97.50/mo · Jobber AI Receptionist: $99/mo flat · Ruby: $245+/mo</div>
+      <select id="tool-cost">
+        <option value="97.50">Smith.ai AI-only — $97.50/mo</option>
+        <option value="99" selected>Jobber AI Receptionist — $99/mo</option>
+        <option value="292.50">Smith.ai + live backup — $292.50/mo</option>
+        <option value="245">Ruby entry — $245/mo</option>
+        <option value="custom">Enter custom amount</option>
+      </select>
+    </div>
+
+    <div class="field-group" id="custom-cost-group" style="display:none">
+      <label for="custom-cost">Custom monthly cost ($)</label>
+      <input type="number" id="custom-cost" min="0" max="2000" placeholder="e.g. 150" value="">
+    </div>
+
+    <button class="calc-btn" onclick="calculateROI()">Calculate my estimated ROI</button>
+
+    <div class="result-box" id="result-box">
+      <div class="result-row">
+        <span class="result-label">Missed calls recovered per month (estimated)</span>
+        <span class="result-val neutral" id="res-recovered"></span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Revenue recovered per month (estimated)</span>
+        <span class="result-val positive" id="res-revenue"></span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Monthly tool cost</span>
+        <span class="result-val" id="res-cost"></span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Estimated net monthly gain</span>
+        <span class="result-val" id="res-net"></span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Estimated annual gain</span>
+        <span class="result-val" id="res-annual"></span>
+      </div>
+      <div class="result-recommendation" id="res-recommendation"></div>
+      <p class="disclaimer">Estimates only. Actual results depend on call quality, AI handling of your specific call type, and caller intent. A tool trial with your own call volume is the best test. Verify current pricing with each vendor before committing.</p>
+    </div>
+  </div>
+
+  <h2>How to Read Your Results</h2>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Strong ROI case</h3>
+      <p style="margin-bottom:0">Net monthly gain is positive and the payback period (tool cost ÷ monthly gain) is under 1 month. Recovering one or two jobs covers the subscription cost. This is the typical result for cleaning businesses with average job values of $200+ missing 15+ calls per month.</p>
+    </div>
+    <div class="card">
+      <h3>Marginal or unclear ROI</h3>
+      <p style="margin-bottom:0">Monthly gain is close to or below tool cost. Either you miss fewer calls than average, your average job value is lower, or your recovery rate assumption is optimistic. Lower the recovery rate to 15% and run the calculation again — if it still works, the case is stronger than it looks.</p>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>The most common mistake in this calculation:</strong> underestimating missed calls. Most home service business owners think they miss 5–10 calls per month. When they check their phone's missed call log and include after-hours calls, weekend calls, and calls received during active jobs, the actual number is often 20–40. Pull your real numbers before relying on an estimate.</p>
+  </div>
+
+  <h2>What the Numbers Look Like for Real Business Types</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Business type</th><th>Missed calls/mo</th><th>Avg job value</th><th>Recovery rate</th><th>Tool cost</th><th>Monthly net gain</th></tr>
+      <tr><td>Solo cleaner</td><td>10</td><td>$180</td><td>25%</td><td>$99</td><td>+$351</td></tr>
+      <tr><td>3-crew cleaning co.</td><td>30</td><td>$220</td><td>30%</td><td>$99</td><td>+$1,881</td></tr>
+      <tr><td>Plumbing contractor</td><td>20</td><td>$450</td><td>25%</td><td>$97.50</td><td>+$2,152.50</td></tr>
+      <tr><td>HVAC business</td><td>25</td><td>$600</td><td>20%</td><td>$245</td><td>+$2,755</td></tr>
+      <tr><td>Landscaping (seasonal)</td><td>15</td><td>$350</td><td>25%</td><td>$99</td><td>+$1,213</td></tr>
+    </table>
+  </div>
+  <p style="font-size:0.8125rem;color:var(--muted)">Illustrative estimates only. Recovery rate, job value, and call volume vary significantly by business. Use your own numbers in the calculator above.</p>
+
+  <h2>The Math Behind the Calculator</h2>
+  <p>The formula is straightforward:</p>
+  <ul>
+    <li><strong>Recovered calls</strong> = Missed calls × Recovery rate</li>
+    <li><strong>Recovered revenue</strong> = Recovered calls × Average job value</li>
+    <li><strong>Net monthly gain</strong> = Recovered revenue − Tool cost</li>
+  </ul>
+  <p>The recovery rate is the most variable input. It estimates what percentage of callers who reach an AI receptionist actually book, versus those who hang up or call back your own number anyway. Real rates vary by business type, call complexity, and AI quality. A conservative starting estimate is 20–25%; 30–35% is achievable for routine service calls with a well-configured AI. Do not use a recovery rate above 40% without evidence from a real trial.</p>
+
+  <h2>Which Tool to Try Based on Your Numbers</h2>
+  <div class="decision">Monthly net gain is clearly positive, you're on Jobber
+→ Jobber AI Receptionist at $99/mo flat.
+  Start a 14-day Jobber trial — AI Receptionist included.
+  Zero integration setup.
+
+Monthly net gain is positive, you're not on Jobber
+→ Smith.ai AI-only at $97.50/mo.
+  Works with any scheduling platform.
+  Check smith.ai for current trial options.
+
+Your calls are complex or high-value ($500+ per job)
+→ Smith.ai live backup ($292.50/mo) or Ruby ($245+/mo).
+  Human backup for complex calls protects more revenue
+  than pure AI at high job values.
+
+Monthly gain barely covers the tool cost
+→ Start with ChatGPT (free) instead.
+  Fix admin time first, then revisit the AI receptionist
+  decision in 90 days when you have better call data.
+
+Result is negative or very marginal
+→ Your call volume or job value may not yet justify
+  an AI receptionist at current pricing.
+  Check: are your missed-call numbers accurate?
+  Most operators undercount missed calls by 2-3x.</div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <p class="faq-q">How do I find out how many calls I miss per month?</p>
+      <p class="faq-a">Check your smartphone's missed calls log — most phones show the last 30 days. Also check calls that came in during jobs (where you answered briefly and then had to call back), calls received after business hours, and weekend calls. Most operators underestimate their missed-call count by a factor of 2–3 when estimating from memory versus checking actual logs.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What recovery rate should I use?</p>
+      <p class="faq-a">Use 20–25% as a conservative starting estimate for routine booking calls. An AI receptionist does not convert every call — some callers hang up when they realize it is AI, some have already booked with a competitor, and some were price shopping with no intent to book. A 25% recovery rate means 1 in 4 missed calls becomes a booked job. Operators who set up their AI well and have straightforward call types report higher rates; treat 35%+ as an optimistic scenario until you have trial data.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Does this calculator include the value of callbacks I was already making?</p>
+      <p class="faq-a">No. The calculator estimates the value of calls that currently go unanswered and unconverted — not calls you are successfully returning. If you are already calling everyone back within an hour and converting a high percentage, your true missed-call count (calls you cannot return in time to prevent the caller from booking elsewhere) is lower than your total missed calls. Use the number of calls you genuinely cannot return within 1 hour, not your total missed calls, for a more accurate input.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Should I include after-hours calls in my missed-call count?</p>
+      <p class="faq-a">Yes — after-hours calls are where AI receptionists deliver some of their clearest value. A caller who reaches voicemail at 9 p.m. on a Sunday and hears "we'll call you back Monday" often calls the next business on their list. An AI receptionist that answers at 9 p.m. and books the job immediately captures a booking that would otherwise be lost. Include all after-hours and weekend missed calls in your count.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if my ROI calculation is negative?</p>
+      <p class="faq-a">A negative result means the expected recovered revenue does not cover the tool cost at your current inputs. Check two things: your missed-call count (most operators undercount by checking memory rather than logs) and your recovery rate assumption. Also check whether your average job value is accurate — if jobs vary widely, a higher-value job type may justify the tool even if the average is low. If the math genuinely doesn't work at your call volume and job value, an AI receptionist is not the right first AI tool. Start with ChatGPT (free) for writing time savings instead.</p>
+    </div>
+  </div>
+
+  <div class="cta-grid">
+    <h2>Ready to test it?</h2>
+    <p class="sub">Both Smith.ai and Jobber offer trial periods. The calculator estimates — real data comes from your own call volume.</p>
+    <div class="two-col">
+      <div class="cta-tool">
+        <strong><a href="https://smith.ai">Smith.ai →</a></strong>
+        <p class="desc">AI-only from $97.50/mo. Works with any platform. Check for current trial.</p>
+        <a href="https://smith.ai" class="trial">View Smith.ai plans</a>
+      </div>
+      <div class="cta-tool">
+        <strong><a href="https://www.getjobber.com">Jobber →</a></strong>
+        <p class="desc">14-day free trial includes AI Receptionist. Best for Jobber users.</p>
+        <a href="https://www.getjobber.com" class="trial">Start Jobber free trial</a>
+      </div>
+      <div class="cta-tool">
+        <strong><a href="/ai-tools/smith-ai-review/">Smith.ai review →</a></strong>
+        <p class="desc">Full review — catches, overage math, integration, who it's not for.</p>
+        <a href="/ai-tools/smith-ai-review/" class="trial">Read the Smith.ai review</a>
+      </div>
+      <div class="cta-tool">
+        <strong><a href="/ai-tools/jobber-ai-receptionist-review/">Jobber AI review →</a></strong>
+        <p class="desc">Full review — flat pricing, Jobber-only limitation, what users report.</p>
+        <a href="/ai-tools/jobber-ai-receptionist-review/" class="trial">Read the Jobber AI review</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Read next</p>
+    <div class="related-links">
+      <a href="/ai-tools/smith-ai-review/">Smith.ai review — AI receptionist, any platform</a>
+      <a href="/ai-tools/jobber-ai-receptionist-review/">Jobber AI Receptionist review — $99/mo flat</a>
+      <a href="/ai-tools/smith-ai-vs-jobber-receptionist/">Smith.ai vs Jobber AI Receptionist — full comparison</a>
+      <a href="/ai-tools/ai-receptionist-vs-answering-service/">AI receptionist vs traditional answering service</a>
+      <a href="/ai-tools/chatgpt-for-home-service-business/">ChatGPT for contractors — free writing time savings</a>
+      <a href="/ai-tools/best-ai-tools-home-service-business/">Best AI tools for home service businesses — full guide</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 HomeServiceSorted · Independent software reviews for US and Canadian home service businesses · <a href="/">Home</a></p>
+  <p style="margin-top:0.4rem">We earn a commission when you click our links and sign up for a paid plan. This doesn't affect our editorial independence. <a href="/">HomeServiceSorted</a> is not sponsored by any software vendor.</p>
+  <p style="margin-top:0.4rem;font-size:0.8rem">Calculator estimates are illustrative only and do not guarantee business outcomes. Verify current software pricing with each vendor. HomeServiceSorted is not liable for business decisions made based on calculator outputs.</p>
+</footer>
+
+<script>
+document.getElementById('tool-cost').addEventListener('change', function() {
+  var customGroup = document.getElementById('custom-cost-group');
+  customGroup.style.display = this.value === 'custom' ? 'block' : 'none';
+});
+
+function calculateROI() {
+  var missedCalls = parseFloat(document.getElementById('missed-calls').value) || 0;
+  var jobValue = parseFloat(document.getElementById('job-value').value) || 0;
+  var recoveryRate = parseFloat(document.getElementById('recovery-rate').value) || 0;
+  var toolSelect = document.getElementById('tool-cost').value;
+  var toolCost = toolSelect === 'custom'
+    ? (parseFloat(document.getElementById('custom-cost').value) || 0)
+    : parseFloat(toolSelect);
+
+  if (missedCalls <= 0 || jobValue <= 0 || recoveryRate <= 0) {
+    alert('Please enter your missed calls, average job value, and recovery rate to calculate.');
+    return;
+  }
+
+  var recovered = missedCalls * (recoveryRate / 100);
+  var revenue = recovered * jobValue;
+  var net = revenue - toolCost;
+  var annual = net * 12;
+
+  document.getElementById('res-recovered').textContent = recovered.toFixed(1) + ' jobs';
+  document.getElementById('res-revenue').textContent = '$' + revenue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  document.getElementById('res-cost').textContent = '$' + toolCost.toFixed(2);
+
+  var netEl = document.getElementById('res-net');
+  netEl.textContent = (net >= 0 ? '+' : '') + '$' + net.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  netEl.className = 'result-val ' + (net > 0 ? 'positive' : net < 0 ? 'negative' : 'neutral');
+
+  var annualEl = document.getElementById('res-annual');
+  annualEl.textContent = (annual >= 0 ? '+' : '') + '$' + annual.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  annualEl.className = 'result-val ' + (annual > 0 ? 'positive' : annual < 0 ? 'negative' : 'neutral');
+
+  var rec = '';
+  if (net > toolCost * 2) {
+    rec = '<strong>Strong ROI case.</strong> Estimated recovered revenue is more than 3× the tool cost. At this level, the decision is not whether to use an AI receptionist — it is which one. If you\'re on Jobber: try the <a href="/ai-tools/jobber-ai-receptionist-review/">Jobber AI Receptionist ($99/mo flat)</a>. If not: <a href="/ai-tools/smith-ai-review/">Smith.ai ($97.50/mo)</a> works with any platform.';
+  } else if (net > 0) {
+    rec = '<strong>Positive ROI.</strong> Estimated recovered revenue covers the tool cost and returns a net gain. Run a trial before committing — real performance depends on your specific call type and AI handling quality. If you\'re on Jobber: <a href="/ai-tools/jobber-ai-receptionist-review/">Jobber AI Receptionist</a>. If not: <a href="/ai-tools/smith-ai-review/">Smith.ai</a>.';
+  } else if (net > -50) {
+    rec = '<strong>Marginal ROI.</strong> Estimated net gain is near breakeven. Double-check your missed-call count — most operators undercount by 2–3× when estimating from memory. If your actual missed calls are higher than entered, the case strengthens. Start with a lower-cost option: <a href="https://chat.openai.com">ChatGPT (free)</a> saves writing time while you gather better call data.';
+  } else {
+    rec = '<strong>Negative ROI at current inputs.</strong> Estimated recovered revenue does not cover the tool cost. Check your missed-call count (are you underestimating?) and your recovery rate assumption. If the numbers are accurate, your current call volume may not justify an AI receptionist subscription. Start with <a href="/ai-tools/chatgpt-for-home-service-business/">ChatGPT (free)</a> for immediate time savings — revisit this calculator when you have more accurate call data.';
+  }
+
+  document.getElementById('res-recommendation').innerHTML = rec;
+  var resultBox = document.getElementById('result-box');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>
