@@ -10,7 +10,8 @@ any other agent, or a human. "I was only asked to write one page" is not an exem
 
 ## Before creating or editing any page
 
-1. Read **`../venture-os/AGENTS.md`** and **`../venture-os/CLAUDE.md`** in full.
+1. Read **`../venture-os/AGENTS.md`** in full — the canonical framework (`CLAUDE.md` and
+   `GEMINI.md` there are thin pointers to it, not separate rulesets).
 2. Read **`../venture-os/principles.md`** — 7 non-negotiable principles; every page must pass all 7.
 3. Read **`../venture-os/ventures/homeservicesorted/`** — `config.json`, `context.md`,
    `voice-guide.md`, `visual-standards.md`, `learnings.md`.
